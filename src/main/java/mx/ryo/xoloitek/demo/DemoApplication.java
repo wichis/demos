@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
-import mx.ryo.xoloitek.demo.pojo.dto.request.XoloInternalHeaderType;
+import mx.ryo.xoloitek.demo.pojo.dto.XoloInternalHeaderType;
 
 @SpringBootApplication
 public class DemoApplication {
