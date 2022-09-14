@@ -1,4 +1,4 @@
-package mx.ryo.xolioitek.demo;
+package mx.ryo.xoloitek.demo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
