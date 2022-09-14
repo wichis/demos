@@ -31,8 +31,8 @@ public class DemoApplication {
 		};
 	}
 
-	@Bean(name = "labels")
-	public ResourceBundle getLabels() {
+	@Bean(name = "label")
+	public ResourceBundle getLabel() {
 		Locale locale = new Locale("es", "MX");
 		ResourceBundle labels = ResourceBundle.getBundle("statics.labels", locale);
 		return labels;
@@ -51,8 +51,8 @@ public class DemoApplication {
 		return errorCode;
 	}
 	
-	@Bean(name = "params")
-	public ResourceBundle getParams() {
+	@Bean(name = "param")
+	public ResourceBundle getParam() {
 		ResourceBundle errorCode = ResourceBundle.getBundle("conf.control-params");
 		return errorCode;
 	}
