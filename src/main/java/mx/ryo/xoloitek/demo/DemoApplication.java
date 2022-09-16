@@ -31,27 +31,27 @@ public class DemoApplication {
 		};
 	}
 
-	@Bean(name = "label")
+	@Bean(name = "labels")
 	public ResourceBundle getLabel() {
 		Locale locale = new Locale("es", "MX");
 		ResourceBundle labels = ResourceBundle.getBundle("statics.labels", locale);
 		return labels;
 	}
 
-	@Bean(name = "error")
+	@Bean(name = "errors")
 	public ResourceBundle getError() {
 		Locale locale = new Locale("es", "MX");
 		ResourceBundle errorCode = ResourceBundle.getBundle("statics.error", locale);
 		return errorCode;
 	}
 	
-	@Bean(name = "path")
+	@Bean(name = "paths")
 	public ResourceBundle getPath() {
 		ResourceBundle errorCode = ResourceBundle.getBundle("conf.paths");
 		return errorCode;
 	}
 	
-	@Bean(name = "param")
+	@Bean(name = "params")
 	public ResourceBundle getParam() {
 		ResourceBundle errorCode = ResourceBundle.getBundle("conf.control-params");
 		return errorCode;
