@@ -2,39 +2,37 @@ package mx.ryo.xoloitek.demo.pojo.dto;
 
 public enum XoloInternalHeaderType {
 	/**
-	 * Con Respuesta Oculta
+	 * Cuando un servicio envié un 204-No Content como respuesta, podrá enviarse este header para proporcionar mayor información.
 	 */
-	CRO("X_CRO"),
+	X_CRO("X-XOLO-Cro"),
 	/**
 	 * Identificador del usuario
 	 */
-	USER("X_USER"), 
+	X_USER("X-XOLO-User"), 
 	/**
 	 * Identificador del role
 	 */
-	ROLE("X_ROLE"), 
+	X_ROLE("X-XOLO-Role"), 
 	/**
 	 * Identificador de la aplicacion
 	 */
-	APP("X_APP"),
+	X_APP("X-XOLO-App"),
 	/**
-	 * Identificador de la pantalla
+	 * Request UUID to track operation on log files.
 	 */	
-	PAGE("X_PAGE"),
+	X_REQUEST_ID("X-XOLO-Request-Id"),
 	/**
-	 * Mensaje que se podra msotrar en la notificacion
+	 * Request UUID to identify and specific session opened on a sytem, this session has no relation with login session open.
 	 */	
-	MSG("X_MSG"),
+	X_SESSION_ID("X-XOLO-Session-Id"),
 	/**
-	 * Modo de notificacion
-	 * {modal, tip, toast}
+	 * Request device name for identify it.
 	 */	
-	NOTIFY("X_NOTIFY"),
+	X_USER_DEVICE_ID("X-XOLO-User-Device-Id"),
 	/**
-	 * Siguiente accion
-	 * {continue, confirm, warn, info, error}
+	 * Request UUID to identify and specific session opened on a sytem, this session has no relation with login session open.
 	 */	
-	NACTION("X_NACTION"),;
+	X_REQUEST_TIME("X-XOLO-Request-Time");
 
 	private String key;
 

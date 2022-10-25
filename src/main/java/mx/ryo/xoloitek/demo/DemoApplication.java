@@ -25,8 +25,8 @@ public class DemoApplication {
 		return new WebMvcConfigurer() {
 			@Override
 			public void addCorsMappings(CorsRegistry registry) {
-				registry.addMapping("/**").allowedHeaders(XoloInternalHeaderType.USER.getKey())
-						.exposedHeaders(XoloInternalHeaderType.CRO.getKey()).allowedOrigins("http://localhost:4200");
+				registry.addMapping("/**").allowedHeaders(XoloInternalHeaderType.X_USER.getKey())
+						.exposedHeaders(XoloInternalHeaderType.X_CRO.getKey()).allowedOrigins("http://localhost:4200");
 			}
 		};
 	}
