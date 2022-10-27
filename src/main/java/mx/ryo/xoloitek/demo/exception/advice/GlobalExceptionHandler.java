@@ -10,10 +10,10 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
+import mx.ryo.xoloitek.common.utils.api.InternalHeaderType;
 import mx.ryo.xoloitek.demo.exception.BusinessLogicException;
 import mx.ryo.xoloitek.demo.exception.DevelLogicException;
 import mx.ryo.xoloitek.demo.exception.devel.DataNotFoundException;
-import mx.ryo.xoloitek.demo.pojo.dto.XoloInternalHeaderType;
 
 @ControllerAdvice
 public class GlobalExceptionHandler {
@@ -31,7 +31,7 @@ public class GlobalExceptionHandler {
 
 	@ExceptionHandler(value = { DataNotFoundException.class })
 	public ResponseEntity<String> handleIOException(DevelLogicException devLogExc) {
-		return ResponseEntity.status(HttpStatus.NO_CONTENT).header(XoloInternalHeaderType.X_CRO.getKey(), devLogExc.getMessage())
+		return ResponseEntity.status(HttpStatus.NO_CONTENT).header(InternalHeaderType.X_CRO.getKey(), devLogExc.getMessage())
 				.body(devLogExc.getMessage());
 	}
 
